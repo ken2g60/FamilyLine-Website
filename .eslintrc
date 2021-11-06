@@ -1,0 +1,90 @@
+{
+  "plugins": [
+    "react",
+    "prettier",
+    "flowtype"
+  ],
+  "rules": {
+    "react/prop-types": 0,
+    "react/jsx-filename-extension": [
+      1,
+      {
+        "extensions": [
+          ".js",
+          ".jsx"
+        ]
+      }
+    ],
+    "flowtype/semi": [
+      2,
+      "always"
+    ],
+    "flowtype/space-after-type-colon": [
+      2,
+      "always"
+    ],
+    "flowtype/space-before-generic-bracket": [
+      2,
+      "never"
+    ],
+    "flowtype/space-before-type-colon": [
+      2,
+      "never"
+    ],
+    "space-before-function-paren": "off",
+    "import/no-extraneous-dependencies": "off",
+    "react/react-in-jsx-scope": "off",
+    "react/no-unescaped-entities": [
+      "error",
+      {
+        "forbid": [
+          ">",
+          "}"
+        ]
+      }
+    ],
+    "react/jsx-indent": [
+      "error",
+      2
+    ],
+    "key-spacing": [
+      "error",
+      {
+        "afterColon": true
+      }
+    ],
+    "array-bracket-spacing": [
+      "error",
+      "never"
+    ],
+    "no-extra-semi": "off",
+    "react/display-name": "off",
+    "react/jsx-first-prop-new-line": "off",
+    "react/jsx-closing-bracket-location": "off",
+    "prettier/prettier": [
+      "error",
+      {
+        "trailingComma": "none",
+        "singleQuote": true,
+        "jsxSingleQuote": true,
+        "tabWidth": 2,
+        "printWidth": 80,
+        "semi": false,
+        "arrowParens": "avoid",
+        "endOfLine": "auto"
+      }
+    ]
+  },
+  "settings": {
+    "react": {
+      "pragma": "React",
+      "version": "detect"
+    }
+  },
+  "parser": "babel-eslint",
+  "extends": [
+    "prettier",
+    "plugin:react/recommended",
+    "@1f8/eslint-config-react"
+  ]
+}
