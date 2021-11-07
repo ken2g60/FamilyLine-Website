@@ -1,4 +1,4 @@
-import { useEffect, FC } from 'react'
+import { useEffect, useState, FC } from 'react'
 import { useRouter } from 'next/router'
 import PropTypes from 'prop-types'
 import { Box, ChakraProvider } from '@chakra-ui/react'
@@ -6,7 +6,7 @@ import '../public/fonts/fonts.css'
 
 import Footer from '@components/Footer'
 import Nav from '@components/Nav'
-
+import MobileNav from '@components/Nav/MobileNav'
 // import configs from 'utils/getConfig'
 import { theme } from 'theme/theme'
 
@@ -25,7 +25,7 @@ const MyApp : FC<Props> = ({ Component, pageProps }) => {
 
   const showNav = !noNavPages.includes(router.pathname)
   const showFooter = !noFooterPages.includes(router.pathname)
-
+  const [OpenMobileNav, setOpenMobileNav] =  useState(false)
 
   return (
       <ChakraProvider theme={theme} resetCSS>
@@ -44,8 +44,9 @@ const MyApp : FC<Props> = ({ Component, pageProps }) => {
               }
             }}
           >
-            <Box fontFamily='Montserrat' pos='relative'>
-              {showNav && <Nav  />}
+            <Box fontFamily='Montserrat' pos='relative' {...OpenMobileNav ? {h: '100vh', maxH:'100vh', overflow:'hidden'}: ''}>
+              {showNav && <Nav setOpenMobileNav={setOpenMobileNav} />}
+             { OpenMobileNav && <MobileNav setOpenMobileNav={setOpenMobileNav} />}
               <Box>
                 <Component {...pageProps}/>
               </Box>

@@ -39,61 +39,11 @@ export const theme = extendTheme({
     '8xl': '6rem'
   },
   colors: {
-    cf: {
-      100: 'rgba(68, 95, 36, 0.04)',
-      200: 'rgba(49,188,46,0.1)',
-      300: 'rgba(60, 145, 48, 0.05)',
-      350: 'rgba(59, 145, 48, 0.7)',
-      400: '#008808',
-      450: '#9DC897',
-      500: 'rgba(60, 145, 48, 0.18)',
-      600: '#d6e1c9',
-      700: '#307926',
-      800: '#5AA250',
-      900: 'linear-gradient(#93CF88, #5AA250)'
+    family: {
+      500: 'rgba(0, 191, 77, 1)'
     },
-    cfBlue: {
-      100: 'rgba(23, 103, 197, 0.1)',
-      400: '#1767C5',
-      500: '#3182CE',
-      900: 'linear-gradient(180deg, #93C5FF 0%, #1767C5 100%)'
-    },
-    cfNewButton: {
-      400: 'linear-gradient(90.06deg, #1FA81B 0.05%, #31BC2E 98.95%)',
-      500: 'linear-gradient(90.06deg, #E08D0A 0.05%, #FFBC00 99.95%)',
-      600: 'linear-gradient(90.06deg, #022D2B 0.05%, #004C46 99.95%)'
-    },
-    cfNew: {
-      400: 'linear-gradient(#1FA81B, #4BD643)',
-      500: '#E08D0A',
-      600: '#004C46',
-      700: '#31BC2E'
-    },
-    cfYellow: {
-      100: 'rgba(208, 142, 49, 0.1)',
-      400: '#D08F31',
-      900: 'linear-gradient(180deg, #FFCC81 0%, #C88523 100%)'
-    },
-    cfDark: {
-      200: 'rgba(227, 231, 221, 0.2)',
-      250: 'rgba(97, 111, 57, 0.1)'
-    },
-    cfButton: {
-      500: '#3c9130',
-      600: '#307926'
-    },
-    proButton: {
-      500: '#008808',
-      600: '#008808'
-    },
-
-    linear: {
-      500: 'linear-gradient(#93CF88, #5AA250)',
-      600: 'linear-gradient(#93CF88, #5AA250)'
-    },
-    progressGreen: {
-      500: '#d6e1c9',
-      600: '#3c9130'
+    familyBg: {
+      500: 'linear-gradient(to top, rgba(0, 191, 77, 1) 0%, rgba(2, 153, 62, 1) 100%)'
     }
   },
   space: {
