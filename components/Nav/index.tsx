@@ -29,8 +29,8 @@ const Nav: FC<IProps> = ({setOpenMobileNav}) => {
   const isTablet =  useMediaQuery({ query: '(max-width: 800px)' })
   const router = useRouter()
   return (
-    <Box w='full' h={20} bg="transparent" px={{sm: 8, md: 12, lg: 4, xl: 16}} pos={'absolute'} top={0} zIndex={3}>
-        <Flex justifyContent={'space-between'}>
+    <Box w='full' h={20} bg="transparent" px={{base: 6, md: 12, lg: 4, xl: 16}} pos={'absolute'} top={0} zIndex={3}>
+        <Flex justifyContent={'space-between'} align="center">
             <Image src={'/images/logo.png'} alt="Family Line Logo" boxSize={20} mt={2} />
             {!isTablet ? <Flex align="center" ml={{md: 6, lg: 20}}>
                 {Links.map(item => 
