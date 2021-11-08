@@ -76,7 +76,7 @@ const Home: NextPage = () => {
       </Grid>
       <Grid templateColumns={{md: 'repeat(1, 1fr)', lg: 'repeat(9, 1fr)'}} gap={{md: 6, lg: 0}} mt={12} mb={12} w={{md: "90%", lg: '85%'}} mx={'auto'}>
         <Box as={GridItem} colSpan={{md: 1, lg: 2}}  px={{base: 6, lg: 0}} mb={6}>
-          <Text fontSize={26} fontWeight={"bold"}>Join the <br /> community of <br />happy Families</Text>
+          <Text fontSize={26} fontWeight={"bold"}>Join the {!isTablet && <br />} community of  {!isTablet && <br />} happy Families</Text>
           <Text 
             color={"rgba(0, 191, 77, 1)"} 
             fontSize={14} 
@@ -92,35 +92,40 @@ const Home: NextPage = () => {
                 _hover={{bg: 'linear-gradient(to top, rgba(0, 191, 77, 1) 0%, rgba(2, 153, 62, 1) 100%)'}}
                 >Start</Button>
         </Box>
-        <Box as={GridItem} colSpan={2} {...isTablet ?{colStart:4} : ''} px={{base: 6, lg: 0}} mb={6}>
-            <Box h={96} rounded="2xl" overflow="hidden">
-              <Flex align={'center'} justify="center" pos={'relative'}>
-                <Image src={"./images/gettyimages-1096158132-612x612 1.png"} alt={"family"} />
-                <Icon as={BsFillPlayFill} boxSize={24} pos={"absolute"} color={'white'} />
-              </Flex>
+        <Box as={GridItem} colSpan={1}></Box>
+        <Box as={GridItem}  colSpan={{md: 1, lg: 6}}>
+          <Grid templateColumns={{md: 'repeat(1, 1fr)', lg: 'repeat(6, 1fr)'}} gap={{md: 6}} >
+            <Box as={GridItem} colSpan={2}  px={{base: 6, lg: 0}} mb={6}>
+              <Box h={96} rounded="2xl" overflow="hidden">
+                <Flex align={'center'} justify="center" pos={'relative'}>
+                  <Image src={"./images/gettyimages-1096158132-612x612 1.png"} alt={"family"} />
+                  <Icon as={BsFillPlayFill} boxSize={24} pos={"absolute"} color={'white'} />
+                </Flex>
+              </Box>
+              <Text textAlign={'center'} mt={4} fontSize={18} fontWeight={'bold'}>Adams Family</Text>
+              <Text textAlign={'center'} mt={2} fontSize={15} color={' rgba(0, 191, 77, 1)'}>Belgium</Text>
             </Box>
-            <Text textAlign={'center'} mt={4} fontSize={18} fontWeight={'bold'}>Adams Family</Text>
-            <Text textAlign={'center'} mt={2} fontSize={15} color={' rgba(0, 191, 77, 1)'}>Belgium</Text>
-        </Box>
-        <Box as={GridItem} colSpan={2}  px={{base: 6, lg: 0}} mb={6}>
-          <Box  h={96} rounded="2xl" overflow="hidden">
-            <Flex align={'center'} justify="center" pos={'relative'}>
-              <Image src={"./images/gettyimages-1150062734-612x612 1.png"} alt={"family"} />
-              <Icon as={BsFillPlayFill} boxSize={24} pos={"absolute"} color={'white'} />
-            </Flex>
-          </Box>
-          <Text textAlign={'center'} mt={4} fontSize={18} fontWeight={'bold'}>Mensah Family</Text>
-          <Text textAlign={'center'} mt={2} fontSize={15} color={' rgba(0, 191, 77, 1)'}>Accra Ghana</Text>
-        </Box>
-        <Box as={GridItem} colSpan={2}  px={{base: 6, lg: 0}} mb={6}>
-          <Box  h={96} rounded="2xl" overflow="hidden">
-            <Flex align={'center'} justify="center" pos={'relative'}>
-              <Image src={"./images/gettyimages-881722918-612x612 1.png"} alt={"family"} />
-              <Icon as={BsFillPlayFill} boxSize={24} pos={"absolute"} color={'white'} />
-            </Flex>
-          </Box>
-          <Text textAlign={'center'} mt={4} fontSize={18} fontWeight={'bold'}>Pedro Family</Text>
-          <Text textAlign={'center'} mt={2} fontSize={15} color={' rgba(0, 191, 77, 1)'}>Mexico</Text>
+            <Box as={GridItem} colSpan={2}  px={{base: 6, lg: 0}} mb={6}>
+              <Box  h={96} rounded="2xl" overflow="hidden">
+                <Flex align={'center'} justify="center" pos={'relative'}>
+                  <Image src={"./images/gettyimages-1150062734-612x612 1.png"} alt={"family"} />
+                  <Icon as={BsFillPlayFill} boxSize={24} pos={"absolute"} color={'white'} />
+                </Flex>
+              </Box>
+              <Text textAlign={'center'} mt={4} fontSize={18} fontWeight={'bold'}>Mensah Family</Text>
+              <Text textAlign={'center'} mt={2} fontSize={15} color={' rgba(0, 191, 77, 1)'}>Accra Ghana</Text>
+            </Box>
+            <Box as={GridItem} colSpan={2}  px={{base: 6, lg: 0}} mb={6}>
+              <Box  h={96} rounded="2xl" overflow="hidden">
+                <Flex align={'center'} justify="center" pos={'relative'}>
+                  <Image src={"./images/gettyimages-881722918-612x612 1.png"} alt={"family"} />
+                  <Icon as={BsFillPlayFill} boxSize={24} pos={"absolute"} color={'white'} />
+                </Flex>
+              </Box>
+              <Text textAlign={'center'} mt={4} fontSize={18} fontWeight={'bold'}>Pedro Family</Text>
+              <Text textAlign={'center'} mt={2} fontSize={15} color={' rgba(0, 191, 77, 1)'}>Mexico</Text>
+            </Box>
+          </Grid>
         </Box>
       </Grid>
       <Box  w={"85%"} mx={'auto'}>
@@ -157,7 +162,7 @@ const Home: NextPage = () => {
               color='white'
               shadow='0 1px 6px 0 rgba(245, 155, 90, 0.02), 0 8px 13px 0 rgba(245, 155, 90, 0.03), 0 20px 26px 0 rgba(245, 155, 90, 0.04)'>Submit</Button>
           </Flex>
-          <Text fontSize={12} color='gray.400'>We’ll never share your emaill with anyone else.</Text>
+          <Text fontSize={12} color='gray.400'>We’ll never share your email with anyone else.</Text>
         </Box>
       </Box>
     </Box>
